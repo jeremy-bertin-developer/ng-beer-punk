@@ -1,0 +1,14 @@
+.card {
+  height: 100%;
+}
+
+.fa.fa-heart {
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.favorite {
+  color: #c3002f;
+}

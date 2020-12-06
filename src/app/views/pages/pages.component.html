@@ -1,0 +1,16 @@
+<app-header-page (emitRouterId)="getRouterId($event)" (emitFilterBeers)="filterTheBeers($event)"></app-header-page>
+<ng-container *ngIf="isFavoriteClicked">
+  <app-dialog-pop-up></app-dialog-pop-up>
+</ng-container>
+<ng-container *ngIf="routerId === 'HOME'">
+  <app-main-page
+    [initialBeersArray]="beers"
+    [beers]="filteredArray"
+    (emitIsFavoriteArray)="getIsFavoriteArray($event)"
+    (isFavoriteClicked)="getIfIsFavoriteClicked($event)"
+  ></app-main-page>
+</ng-container>
+
+<ng-container *ngIf="routerId === 'FAVORITE'">
+  <app-favorite-page [favoriteBeersArray]="favoriteBeers"></app-favorite-page>
+</ng-container>

@@ -1,0 +1,14 @@
+<div class="card border-0 shadow">
+  <div class="card-body">
+    <img class="float-right" [src]="imageUrl" height="150px" />
+    <h5 class="card-title">{{ name }}</h5>
+    <h6 class="text-muted card-subtitle mb-2">{{ description | shorten }}</h6>
+    <p class="card-text">{{ brewersTips | shorten }}</p>
+    <p class="card-text">Abv : {{ abv }}</p>
+    <span
+      ><p class="card-text">Ph : {{ ph }}</p></span
+    >
+
+    <i [ngClass]="{ favorite: favorite === true }" class="fa fa-heart p-3" (click)="isFavorite()"></i>
+  </div>
+</div>

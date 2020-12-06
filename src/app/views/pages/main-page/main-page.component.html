@@ -1,0 +1,20 @@
+<main id="home" class="mt-5">
+  <div class="container">
+    <div class="row">
+      <ng-container *ngFor="let beer of beers ? beers : initialBeersArray">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 mb-3">
+          <app-beer
+            [name]="beer.name"
+            [abv]="beer.abv"
+            [brewersTips]="beer.brewers_tips"
+            [description]="beer.description"
+            [imageUrl]="beer.image_url"
+            [ph]="beer.ph"
+            [favorite]="beer.favorite"
+            (emitIsFaorite)="isFavorite(beer)"
+          ></app-beer>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</main>
